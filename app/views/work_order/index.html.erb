@@ -1,0 +1,14 @@
+<h1 style="text-align:center"> Work Order Schedule </h1>
+ <div style="margin: auto; width: 90%;" >    
+  <div style='display: inline-block;padding: 50px'>
+
+    <table id="grid-autores">
+      <tr>
+        <th width="200px">Technician</th>
+      </tr>
+      <% @technicians.each do |tech| %>
+        <tr>
+          <td style='border-style: solid;border-color: red;'><%=h tech.name %></td>
+        </tr>
+      <% end %>
+    </table>

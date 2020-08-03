@@ -1,5 +1,9 @@
 Rails Scheduling App - 
 
+bundle install 
+bin/rails db:migrate
+rake db:setup
+
 Overview 
 The purpose of this assignment is to demonstrate competence in the concepts, process, and tooling required to develop web applications with Ruby on Rails. The end result will be a basic application that stores technicians and work orders in a database, displays them on a scheduling grid, and allows the user to select slots in the schedule. 
 Deliverables 
