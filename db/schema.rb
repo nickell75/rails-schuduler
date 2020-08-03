@@ -29,8 +29,17 @@ ActiveRecord::Schema.define(version: 2020_08_03_214056) do
   end
 
   create_table "work_orders", force: :cascade do |t|
+    t.datetime "time"
+    t.integer "duration"
+    t.float "price"
+    t.bigint "technician_id"
+    t.bigint "location_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["location_id"], name: "index_work_orders_on_location_id"
+    t.index ["technician_id"], name: "index_work_orders_on_technician_id"
   end
 
+  add_foreign_key "work_orders", "locations"
+  add_foreign_key "work_orders", "technicians"
 end
